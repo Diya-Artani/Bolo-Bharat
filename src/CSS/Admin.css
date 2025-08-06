@@ -1,0 +1,102 @@
+.admin-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.chart-container {
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-section input[type="text"],
+.filter-section select {
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.filter-section button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.filter-section button:hover {
+    background-color: #218838;
+}
+
+.grievance-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.grievance-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.grievance-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.4em;
+    color: #333;
+}
+
+.grievance-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.grievance-card select {
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.grievance-card button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.grievance-card button:hover {
+    background-color: #0056b3;
+}
+
+.no-grievances {
+    text-align: center;
+    color: #666;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
