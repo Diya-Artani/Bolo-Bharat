@@ -31,8 +31,8 @@ function App() {
         </header>
         <main>
           <Routes>
-            {/* Redirect from the root path to the login page */}
-            <Route path="/" element={<Navigate to="/login" />} />
+            {/* Redirect from the root path to the register page */}
+            <Route path="/" element={<Navigate to="/register" />} />
             <Route path="/login" element={<Login setUser={setUser} />} />
             <Route path="/register" element={<Register />} />
             <Route path="/welcome" element={<Welcome user={user} />} />
@@ -45,10 +45,10 @@ function App() {
           </Routes>
         </main>
         <footer className="App-footer">
-          <p>© 2024 Bolo Bharat . All Rights Reserved.</p>
+          <p>© 2025 Bolo Bharat . All Rights Reserved.</p>
           <div className="footer-icons">
-            <img src="/assets/ashoka-chakra.svg" alt="Ashoka Chakra" />
-            <img src="/assets/progress-icon.svg" alt="Progress Icon" />
+            <img src="/images/Flag.svg" alt="Indian Flag" />
+            <img src="/images/handshake.jpg" alt="Handshake Icon" />
           </div>
         </footer>
       </div>
