@@ -15,7 +15,6 @@ const GrievanceForm = ({ user }) => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    // Fetch user details from Firebase when component mounts
     useEffect(() => {
         if (user && user.uid) {
             const userDetailsRef = ref(db, `userDetails/${user.uid}`);
@@ -28,8 +27,7 @@ const GrievanceForm = ({ user }) => {
         }
     }, [user]);
 
-    const selectedDomain = location.state?.selectedDomain || ''; // Retrieve selected domain from route state
-
+    const selectedDomain = location.state?.selectedDomain || ''; 
     const submitGrievance = async (grievanceData) => {
         try {
             const grievancesRef = ref(db, `grievances/${grievanceData.userId}`);
@@ -72,8 +70,7 @@ const GrievanceForm = ({ user }) => {
         };
 
         submitGrievance(grievanceData);
-        
-        // Reset form
+     
         setFormData({
             problem: '',
             description: '',

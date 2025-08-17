@@ -32,7 +32,7 @@ const UserDetails = ({ user }) => {
         set(userDetailsRef, details)
             .then(() => {
                 console.log("User details saved!");
-                navigate('/domain-selection'); // Navigate to the domain selection page
+                navigate('/domain-selection'); 
             })
             .catch((error) => {
                 console.error("Error saving user details: ", error);
@@ -41,6 +41,7 @@ const UserDetails = ({ user }) => {
 
     return (
         <div className="user-details-container">
+           
             <h2>Enter Your Details</h2>
             <form onSubmit={handleSubmit} className="user-details-form">
                 <div className="form-group">

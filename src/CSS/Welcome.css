@@ -4,9 +4,9 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #FFFFFF; /* Clean White */
+    background-color: #FFFFFF; 
     padding: 20px;
-    color: #212121; /* Charcoal Black */
+    color: #212121;
     background: linear-gradient(135deg, var(--primary-light) 0%, var(--background) 100%);
     border-radius: 1.5rem;
     box-shadow: 0 6px 32px rgba(15,76,129,0.08), 0 1.5px 6px rgba(0,0,0,0.06);
@@ -16,8 +16,7 @@
 }
 
 .welcome-container h2 {
-    color: #0F4C81; /* IN India Blue */
-    font-size: 2rem;
+    color: #0F4C81;
     margin-bottom: 20px;
     font-weight: 700;
 }
@@ -37,7 +36,7 @@
     padding: 16px;
     border-radius: 16px;
     transition: all 0.3s ease;
-    background-color: #F0F0F0; /* Neutral Gray */
+    background-color: #70aee4; 
 }
 
 .step:hover {
@@ -47,8 +46,7 @@
 }
 
 .step-number {
-    background-color: #0F4C81; /* IN India Blue */
-    color: white;
+    background-color: #0F4C81; 
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -59,6 +57,7 @@
     font-weight: bold;
     margin-right: 15px;
     flex-shrink: 0;
+    color:#FFFFFF;
 }
 
 .step-content {
@@ -68,20 +67,20 @@
 .step-content h3 {
     margin: 0;
     font-size: 1.2rem;
-    color: #0F4C81; /* IN India Blue */
+    color: #0F4C81; 
     font-weight: 700;
 }
 
 .step-content p {
     margin: 5px 0 0;
-    color: #536471;
+    color: #01090f;
     font-size: 0.9375rem;
     line-height: 1.4;
 }
 
 .auth-button {
     padding: 12px 24px;
-    background-color: #0F4C81; /* IN India Blue */
+    background-color: #0F4C81; 
     color: white;
     border: none;
     border-radius: 4px;
@@ -96,13 +95,13 @@
 }
 
 .auth-button:hover {
-    background-color: #1D4E89; /* Ashoka Chakra Blue */
+    background-color: #1D4E89; 
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .success-message {
-    color: #2E8857; /* Calm Green */
+    color: #2E8857; 
     background-color: rgba(46, 136, 87, 0.1);
     padding: 12px;
     border-radius: 4px;
@@ -117,5 +116,5 @@
 
 .loading-spinner {
     animation: loading-spin 1s linear infinite;
-    color: #FF9933; /* IN Saffron Orange */
+    color: #FF9933; 
 }

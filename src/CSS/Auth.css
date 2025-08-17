@@ -1,4 +1,3 @@
-/* Error message styling for auth forms */
 .auth-error {
     color: #fff;
     background: #0F2547;
@@ -24,8 +23,6 @@
     --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .auth-container {
     width: 100%;
     min-height: 100vh;
@@ -37,8 +34,6 @@
     padding: 2rem;
     margin: 0 auto;
 }
-
-
 
 @keyframes slideUp {
     from {
@@ -125,7 +120,7 @@
 .auth-input:focus {
     border-color: var(--primary-color);
     border-width: 2px;
-    padding: 11px 15px; /* Compensate for increased border */
+    padding: 11px 15px;
     box-shadow: 0 0 0 3px rgba(15, 76, 129, 0.1);
 }
 
@@ -162,7 +157,7 @@
 }
 
 .auth-button:hover {
-    background-color: #004d40; /* Darker shade on hover */
+    background-color: #004d40; 
 }
 
 .auth-text {

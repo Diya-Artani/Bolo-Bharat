@@ -21,12 +21,10 @@ const DomainSelection = ({ user, setDomain }) => {
             console.error("setDomain is not a function");
         }
 
-        // Save the selected domain to Firebase Realtime Database
         const domainRef = ref(db, `users/${user.uid}/selectedDomain`);
         set(domainRef, { domain })
             .then(() => {
                 console.log("Domain selection saved!");
-                // Redirect to GrievanceForm with selected domain in state
                 navigate('/report', { state: { selectedDomain: domain } });
             })
             .catch((error) => {
