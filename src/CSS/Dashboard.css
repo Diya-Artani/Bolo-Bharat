@@ -1,188 +1,85 @@
-:root {
-  --primary-color: #1DA1F2;
-  --secondary-color: #14171A;
-  --background-color: #FFFFFF;
-  --text-color: #657786;
-  --border-color: #E1E8ED;
-  --hover-color: #E8F5FE;
+.grievance-card:hover p strong {
+  color: #4fc3f7;
+  transition: color 0.2s;
 }
+/* Enhanced Dashboard.css - Modern, Clean, and Accessible */
 
 .dashboard-container {
-  display: grid;
-  grid-template-columns: 275px 1fr 350px;
-  min-height: 100vh;
-  background-color: var(--background-color);
+  max-width: 950px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(120deg, #e8f4ff 0%, #f7fafc 100%);
+  border-radius: 22px;
+  box-shadow: 0 6px 32px rgba(30, 64, 175, 0.10);
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-/* Sidebar */
-.sidebar {
-  padding: 1rem;
-  border-right: 1px solid var(--border-color);
-  position: sticky;
-  top: 0;
-  height: 100vh;
-}
-
-.nav-item {
-  display: flex;
-  align-items: center;
-  padding: 0.75rem 1rem;
-  margin: 0.5rem 0;
-  border-radius: 9999px;
-  color: var(--secondary-color);
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.nav-item:hover {
-  background-color: var(--hover-color);
-}
-
-.nav-item.active {
-  font-weight: 700;
-}
-
-/* Main Content */
-.main-content {
-  border-right: 1px solid var(--border-color);
-  min-height: 100vh;
-}
-
-.content-header {
-  padding: 1rem;
-  border-bottom: 1px solid var(--border-color);
-  position: sticky;
-  top: 0;
-  background-color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(12px);
+h2 {
+  color: #0F4C81;
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(15,76,129,0.07);
 }
 
 .grievance-card {
-  padding: 1rem;
-  border-bottom: 1px solid var(--border-color);
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(30, 64, 175, 0.10);
+  margin-bottom: 2rem;
+  padding: 1.1rem 1.2rem 0.7rem 1.2rem;
+  transition: box-shadow 0.2s, border-left 0.2s;
+  border-left: 6px solid #0F4C81;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
 .grievance-card:hover {
-  background-color: rgba(0, 0, 0, 0.03);
-}
-
-.grievance-header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.user-name {
-  font-weight: 700;
-  color: var(--secondary-color);
-}
-
-.grievance-time {
-  color: var(--text-color);
-  font-size: 0.9rem;
-}
-
-.grievance-content {
-  color: var(--secondary-color);
-  line-height: 1.5;
-}
-
-.grievance-actions {
-  display: flex;
-  gap: 4rem;
-  margin-top: 0.75rem;
-  color: var(--text-color);
-}
-
-.action-button {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-  transition: color 0.2s ease;
-}
-
-.action-button:hover {
-  color: var(--primary-color);
-}
-
-/* Right Sidebar */
-.right-sidebar {
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-  height: 100vh;
-}
-
-.search-box {
-  background-color: #EFF3F4;
-  border-radius: 9999px;
-  padding: 0.75rem 1rem;
-  margin-bottom: 1rem;
-}
-
-.search-box input {
-  background: transparent;
-  border: none;
-  outline: none;
-  width: 100%;
-  color: var(--secondary-color);
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .dashboard-container {
-    grid-template-columns: 88px 1fr 350px;
-  }
-}
-
-@media (max-width: 992px) {
-  .dashboard-container {
-    grid-template-columns: 88px 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .dashboard-container {
-    grid-template-columns: 1fr;
-  }
-  
-  .sidebar, .right-sidebar {
-    display: none;
-  }
-}
-.dashboard-container {
-    padding: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.grievance-card {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 10px 0;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(15, 76, 129, 0.18);
+  background: #f4faff;
+  transform: translateY(-2px) scale(1.01);
+  transition: box-shadow 0.2s, background 0.2s, transform 0.2s;
 }
 
 .grievance-card h3 {
-    margin: 0 0 10px;
-    font-size: 1.2em;
-    color: #333;
+  margin: 0 0 0.8rem 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.grievance-card:hover > h3,
+.grievance-card:hover h3 {
+  color: #FFD600 !important;
+  transition: color 0.2s;
 }
 
 .grievance-card p {
-    margin: 5px 0;
-    color: #555;
+  margin: 0.25rem 0;
+  color: #263238;
+  font-size: 1.08rem;
+  line-height: 1.5;
+}
+
+.grievance-card p strong {
+  color: #0F2547;
+  font-weight: 600;
+  margin-right: 0.3em;
+  transition: color 0.2s;
 }
 
 .no-grievances {
-    text-align: center;
-    color: #666;
-    font-size: 1.2em;
+  color: #b71c1c;
+  background: #fff3f3;
+  border-radius: 10px;
+  padding: 1.1rem 1.3rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.08rem;
+  box-shadow: 0 2px 8px rgba(183,28,28,0.07);
 }
+

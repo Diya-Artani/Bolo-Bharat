@@ -1,18 +1,80 @@
-.admin-container {
-    padding: 1.5rem;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #FFFFFF;
+/* Chart Card Styles */
+.chart-card {
+    margin: 2.5rem auto 2.5rem auto;
+    padding: 2.2rem 2.5rem 2.5rem 2.5rem;
+    background: linear-gradient(120deg, #f8fbff 0%, #eaf1fa 100%);
+    border-radius: 22px;
+    border: 1.5px solid #dbeafe;
+    box-shadow: 0 6px 32px rgba(15,76,129,0.10), 0 1.5px 6px rgba(0,0,0,0.07);
+    transition: box-shadow 0.28s, transform 0.22s, border-color 0.22s;
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+    max-width: 700px;
 }
 
+.chart-card:hover {
+    box-shadow: 0 20px 60px rgba(15,76,129,0.20), 0 8px 24px rgba(0,0,0,0.15);
+    transform: scale(1.045) translateY(-10px);
+    border-color: #0F4C81;
+    background: linear-gradient(120deg, #f0f6ff 0%, #e0eaf6 100%);
+    z-index: 10;
+}
+
+.chart-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0F4C81;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.02em;
+    text-align: left;
+    padding-left: 0.2em;
+}
+.admin-container {
+    width: 100%;
+    margin: 2.5rem auto;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--background) 100%);
+    border-radius: 1.5rem;
+    box-shadow: 0 6px 32px rgba(15,76,129,0.08), 0 1.5px 6px rgba(0,0,0,0.06);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    transition: box-shadow 0.3s;
+    box-sizing: border-box;
+}
+
+.admin-container h2{
+    text-align: center;
+}
 .chart-container {
     margin-bottom: 2rem;
-    padding: 1.5rem;
-    background-color: #FFFFFF;
-    border-radius: 16px;
-    border: 1px solid #F0F0F0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 2rem 2.5rem;
+    background: linear-gradient(120deg, #f8fbff 0%, #eaf1fa 100%);
+    border-radius: 20px;
+    border: 1.5px solid #dbeafe;
+    box-shadow: 0 6px 32px rgba(15,76,129,0.10), 0 1.5px 6px rgba(0,0,0,0.07);
+    transition: box-shadow 0.25s, transform 0.22s, border-color 0.22s;
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+}
+
+.chart-container::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 8px;
+    background: linear-gradient(90deg, #0F4C81 0%, #1D4E89 100%);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    z-index: 2;
+    opacity: 0.85;
+}
+
+.chart-container:hover {
+    box-shadow: 0 16px 48px rgba(15,76,129,0.18), 0 4px 16px rgba(0,0,0,0.13);
+    transform: scale(1.035) translateY(-8px);
+    border-color: #0F4C81;
+    background: linear-gradient(120deg, #f0f6ff 0%, #e0eaf6 100%);
+    z-index: 10;
 }
 
 .filter-section {
@@ -68,70 +130,286 @@
 }
 
 .grievance-card {
+    align-self: center;
+    width: 90%;
     background-color: #FFFFFF;
-    border: 1px solid #F0F0F0;
-    border-radius: 16px;
-    margin: 1rem 0;
-    padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: all 0.2s ease;
+    border: 1.5px solid #e0e7ef;
+    border-radius: 18px;
+    margin: 1.5rem 0;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4px 18px rgba(15, 76, 129, 0.07), 0 1.5px 6px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s, transform 0.18s, border-color 0.2s, background 0.2s, color 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    text-align:center;
+    position: relative;
 }
 
 .grievance-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(15, 76, 129, 0.13), 0 2px 8px rgba(0,0,0,0.09);
+    transform: translateY(-4px) scale(1.01);
+    border-color: #0F4C81;
+    background-color: #0F2541; /* dark blue */
+    color: #fff;
+}
+
+.grievance-card:hover h3,
+.grievance-card:hover h4,
+.grievance-card:hover p,
+.grievance-card:hover .domain-badge,
+.grievance-card:hover .user-details p,
+.grievance-card:hover .complaint-info p {
+    color: #e8f4ff !important;
+}
+
+.grievance-card:hover .status-badge {
+    background: #fff;
+    color: #0F2541 !important;
+    border-color: #fff;
+}
+
+.grievance-card:hover .domain-badge {
+    background-color: #193a5e;
+    color: #FFD700 !important; /* gold/yellow for highlight */
+    border-color: #FFD700;
+}
+
+.grievance-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    gap: 1rem;
 }
 
 .grievance-card h3 {
-    margin: 0 0 1rem;
-    font-size: 1.2rem;
+    margin: 0;
+    font-size: 1.25rem;
     color: #0F4C81;
     font-weight: 700;
+    letter-spacing: 0.01em;
+    text-align: left;
 }
 
-.grievance-card p {
-    margin: 0.5rem 0;
+.status-badge {
+    padding: 0.45em 1.1em;
+    border-radius: 999px;
+    font-size: 0.98rem;
+    font-weight: 600;
+    background: #e8f4ff;
+    color: #0F4C81;
+    border: 1.5px solid #0F4C81;
+    margin-left: 1rem;
+    text-transform: capitalize;
+    transition: background 0.2s, color 0.2s;
+}
+
+.status-badge.resolved {
+    background: #e8f5e9;
+    color: #1b5e20;
+    border-color: #1b5e20;
+}
+.status-badge.being-studied,
+.status-badge.in-progress,
+.status-badge.under-review {
+    background: #fffde7;
+    color: #e65100;
+    border-color: #e65100;
+}
+
+.grievance-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.user-details, .complaint-details {
+    flex: 1 1 250px;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.user-details h4,
+.complaint-info h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.08rem;
+    color: #0F4C81;
+    font-weight: 600;
+    text-align: left;
+}
+
+.user-details p,
+.complaint-info p {
+    margin: 0.3rem 0;
     color: #212121;
-    font-size: 0.9375rem;
+    font-size: 0.97rem;
     line-height: 1.5;
+    text-align: left;
+    word-break: break-word;
 }
 
-.grievance-card select {
-    padding: 0.75rem 1rem;
-    margin-right: 0.75rem;
-    margin-bottom: 0.75rem;
-    border-radius: 8px;
-    border: 1px solid #F0F0F0;
-    font-size: 0.9375rem;
-    background-color: #F0F0F0;
-    min-width: 200px;
-    transition: all 0.2s ease;
+.user-details p {
+     display: flex;
+    align-items: center;
+    gap: 0.5em;
+    justify-content: flex-start;
+    text-align: left;
+    margin: 0.3rem 0;
+    padding: 0;
 }
 
-.grievance-card select:focus {
-    border-color: #1D4E89;
-    background-color: #FFFFFF;
-    box-shadow: 0 0 0 3px rgba(29, 78, 137, 0.1);
-    outline: none;
+.user-details p strong {
+    min-width: 90px;
+    text-align: left;
+    font-weight: 600;
+    color: #0F4C81;
 }
 
-.grievance-card button {
+.user-details .domain-badge {
+    margin-left: 0.5em;
+    margin-bottom: 0;
+    vertical-align: middle;
+    text-align: left;
+    align-self: center;
+}
+
+.domain-badge {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0F4C81;
+    background-color: #e8f4ff;
+    padding: 0.5em 1.2em;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    text-align: center;
+    border: 2px solid #0F4C81;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 6px rgba(15, 76, 129, 0.07);
+    display: inline-block;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+/* Domain-specific colors */
+.domain-badge[data-domain="Health"] {
+    background-color: #ffe8e8;
+    color: #cc0000;
+    border-color: #cc0000;
+}
+.domain-badge[data-domain="Education"] {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+    border-color: #1b5e20;
+}
+.domain-badge[data-domain="Environment"] {
+    background-color: #e0f2f1;
+    color: #004d40;
+    border-color: #004d40;
+}
+.domain-badge[data-domain="Infrastructure"] {
+    background-color: #fff3e0;
+    color: #e65100;
+    border-color: #e65100;
+}
+.domain-badge[data-domain="Transport"] {
+    background-color: #e3f2fd;
+    color: #1565c0;
+    border-color: #1565c0;
+}
+.domain-badge[data-domain="Electricity"] {
+    background-color: #fffde7;
+    color: #fbc02d;
+    border-color: #fbc02d;
+}
+.domain-badge[data-domain="Water Supply"] {
+    background-color: #e1f5fe;
+    color: #0288d1;
+    border-color: #0288d1;
+}
+.domain-badge[data-domain="Sanitation"] {
+    background-color: #f3e5f5;
+    color: #6a1b9a;
+    border-color: #6a1b9a;
+}
+.domain-badge[data-domain="Agriculture"] {
+    background-color: #f1f8e9;
+    color: #388e3c;
+    border-color: #388e3c;
+}
+.domain-badge[data-domain="Public Safety"] {
+    background-color: #fbe9e7;
+    color: #d84315;
+    border-color: #d84315;
+}
+.domain-badge[data-domain="Employment"] {
+    background-color: #e8eaf6;
+    color: #3949ab;
+    border-color: #3949ab;
+}
+.domain-badge[data-domain="Social Welfare"] {
+    background-color: #fce4ec;
+    color: #ad1457;
+    border-color: #ad1457;
+}
+.domain-badge[data-domain="Housing"] {
+    background-color: #ede7f6;
+    color: #512da8;
+    border-color: #512da8;
+}
+.domain-badge[data-domain="Technology"] {
+    background-color: #e0f7fa;
+    color: #00838f;
+    border-color: #00838f;
+}
+.domain-badge[data-domain="Finance"] {
+    background-color: #fff8e1;
+    color: #ff8f00;
+    border-color: #ff8f00;
+}
+.domain-badge[data-domain="Others"] {
+    background-color: #ececec;
+    color: #616161;
+    border-color: #616161;
+}
+
+.complaint-info {
+    margin-top: 0.5rem;
+}
+
+.admin-actions {
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.status-buttons {
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+}
+
+.status-btn {
     background-color: #0F4C81;
     border: none;
-    color: white;
-    padding: 0.75rem 1.25rem;
-    margin: 0.5rem 0.5rem 0.5rem 0;
+    color: #fff;
+    padding: 0.7rem 1.3rem;
     border-radius: 9999px;
     cursor: pointer;
-    font-size: 0.875rem;
+    font-size: 0.97rem;
     font-weight: 600;
-    transition: all 0.2s ease;
+    transition: background 0.18s, transform 0.12s, box-shadow 0.18s;
+    margin-bottom: 0.3rem;
 }
 
-.grievance-card button:hover {
+.status-btn.active,
+.status-btn:hover {
     background-color: #1D4E89;
-    transform: translateY(-1px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px) scale(1.03);
+    box-shadow: 0 2px 8px rgba(15, 76, 129, 0.13);
 }
 
 .button-group {
@@ -151,6 +429,13 @@
     border-radius: 16px;
     border: 1px solid #F0F0F0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 900px) {
+    .grievance-details {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -183,5 +468,16 @@
     .grievance-card button {
         width: 100%;
         margin: 0.25rem 0;
+    }
+    .grievance-card {
+        padding: 1.1rem 0.5rem;
+        border-radius: 12px;
+    }
+    .grievance-details {
+        gap:0.7rem;
+    }
+    .domain-badge {
+        font-size: 0.98rem;
+        padding: 0.4em 0.8em;
     }
 }
