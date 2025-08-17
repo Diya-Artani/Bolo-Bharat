@@ -5,10 +5,10 @@ import '../CSS/GrievanceConfirmation.css';
 const GrievanceConfirmation = () => {
     const location = useLocation();
     const navigate = useNavigate();
-    const { token, domain } = location.state || {}; // Retrieve the token and domain from the route state
+    const { token, domain } = location.state || {}; 
 
     const handleDashboardClick = () => {
-        navigate('/dashboard'); // Redirect to the dashboard page
+        navigate('/dashboard');
     };
 
     return (

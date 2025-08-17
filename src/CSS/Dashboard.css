@@ -2,7 +2,6 @@
   color: #4fc3f7;
   transition: color 0.2s;
 }
-/* Enhanced Dashboard.css - Modern, Clean, and Accessible */
 
 .dashboard-container {
   max-width: 950px;
@@ -51,11 +50,6 @@ h2 {
   letter-spacing: 0.02em;
 }
 
-.grievance-card:hover > h3,
-.grievance-card:hover h3 {
-  color: #FFD600 !important;
-  transition: color 0.2s;
-}
 
 .grievance-card p {
   margin: 0.25rem 0;
@@ -83,3 +77,33 @@ h2 {
   box-shadow: 0 2px 8px rgba(183,28,28,0.07);
 }
 
+.vote-button {
+  align-self: center;
+  width: fit-content;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.75rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.vote-button:hover {
+  background-color: #8fbbe1; 
+  transform: translateY(-2px);
+}
+
+.vote-button:active {
+  transform: scale(0.96);
+}
+
+.vote-button:disabled {
+  background-color: #28a745;
+  cursor: not-allowed;
+  opacity: 0.85;
+}

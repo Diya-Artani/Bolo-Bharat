@@ -1,12 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../CSS/Welcome.css'; // Import the shared CSS file
+import '../CSS/Welcome.css';
 
 const Welcome = () => {
     const navigate = useNavigate();
 
     const handleGetStarted = () => {
-        navigate('/user-details'); // Redirect to the User Details Form page
+        navigate('/user-details'); 
     };
 
     return (

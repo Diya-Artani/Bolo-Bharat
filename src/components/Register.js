@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { auth } from '../firebaseConfig';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate, Link } from 'react-router-dom';
-import '../CSS/Auth.css'; // Import the shared CSS file
+import '../CSS/Auth.css'; 
 
 const Register = () => {
     const [email, setEmail] = useState('');
@@ -15,7 +15,7 @@ const Register = () => {
         setError('');
         try {
             await createUserWithEmailAndPassword(auth, email, password);
-            navigate('/welcome'); // Redirect to the Welcome page
+            navigate('/welcome'); 
         } catch (error) {
             if (error.code === 'auth/email-already-in-use') {
                 setError('This email is already registered. Please login or use a different email.');
@@ -62,7 +62,7 @@ const Register = () => {
                 <button type="submit" className="auth-button">Register</button>
             </form>
             <p className="auth-text">
-                Already have an account? <Link to="/" className="auth-link">Login</Link>
+                Already have an account? <Link to="/login" className="auth-link">Login</Link>
             </p>
         </div>
     );
