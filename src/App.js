@@ -13,7 +13,10 @@ import Dashboard from './components/Dashboard';
 import Admin from './components/Admin';
 import ForgetPassword from './components/ForgetPassword';
 
+
 import './App.css';
+
+ 
 
 const Navbar = ({ user, setUser }) => {
   const navigate = useNavigate();
@@ -54,7 +57,7 @@ const Navbar = ({ user, setUser }) => {
       alert("Failed to delete account. You may need to re-login and try again.");
     }
   };
-
+  
   return (
     <nav className="navbar">
       <ul>
